@@ -13,3 +13,5 @@
 /Dotnet-Core-with-Docker/WebAPI/appsettings.Development.json
 /WebAPI/appsettings.json
 /WebAPI/appsettings.Development.json
+/WorkerServiceDemo/appsettings.json
+/WorkerServiceDemo/appsettings.Development.json
