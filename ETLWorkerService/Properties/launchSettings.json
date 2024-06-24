@@ -8,7 +8,8 @@
       "dotnetRunMessages": true
     },
     "Container (Dockerfile)": {
-      "commandName": "Docker"
+      "commandName": "Docker",
+      "DockerfileRunArguments": "--network=demodb_trainingnet -v ./csvdata:/csvdata:rw"
     }
   },
   "$schema": "http://json.schemastore.org/launchsettings.json"
