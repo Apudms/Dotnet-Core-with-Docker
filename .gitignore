@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BackendAPI/appsettings.json
+/BackendAPI/appsettings.Development.json
+.vs/
+/ETLWorkerService/appsettings.json
+/ETLWorkerService/appsettings.Development.json
+/HangfireDemo/appsettings.json
+/HangfireDemo/appsettings.Development.json
