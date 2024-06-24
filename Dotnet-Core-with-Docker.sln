@@ -5,9 +5,11 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{E235B21B-853E-4ECE-B016-4605DDDBDCF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETLWorkerService", "ETLWorkerService\ETLWorkerService.csproj", "{AEFE535B-5CFD-44C8-BBCE-CFE0B65AF656}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ETLWorkerService", "ETLWorkerService\ETLWorkerService.csproj", "{AEFE535B-5CFD-44C8-BBCE-CFE0B65AF656}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangfireDemo", "HangfireDemo\HangfireDemo.csproj", "{D489923B-9386-4AF3-888D-342234E01453}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HangfireDemo", "HangfireDemo\HangfireDemo.csproj", "{D489923B-9386-4AF3-888D-342234E01453}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerServiceDemo", "WorkerServiceDemo\WorkerServiceDemo.csproj", "{B13D320D-F992-44F3-8E5D-548634CF1D55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D489923B-9386-4AF3-888D-342234E01453}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D489923B-9386-4AF3-888D-342234E01453}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D489923B-9386-4AF3-888D-342234E01453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B13D320D-F992-44F3-8E5D-548634CF1D55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13D320D-F992-44F3-8E5D-548634CF1D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B13D320D-F992-44F3-8E5D-548634CF1D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B13D320D-F992-44F3-8E5D-548634CF1D55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
