@@ -31,7 +31,6 @@ namespace WebAPI.Services
                 _command.Parameters.AddWithValue("@CategoryId", entity.CategoryId);
                 _command.Parameters.AddWithValue("@Stock", entity.Stock);
                 _command.Parameters.AddWithValue("@Price", entity.Price);
-                // Tambahkan parameter output
                 SqlParameter outputIdParam = new SqlParameter("@ProductId", SqlDbType.Int)
                 {
                     Direction = ParameterDirection.Output
@@ -39,8 +38,7 @@ namespace WebAPI.Services
                 _command.Parameters.Add(outputIdParam);
                 _connection.Open();
                 _command.ExecuteNonQuery();
-                entity.ProductId = (int)outputIdParam.Value; // Ambil nilai ID yang dihasilkan
-                //entity.ProductId = Convert.ToInt32(_command.ExecuteScalar());
+                entity.ProductId = (int)outputIdParam.Value;
                 return entity;
             }
             catch (SqlException sqlEx)
