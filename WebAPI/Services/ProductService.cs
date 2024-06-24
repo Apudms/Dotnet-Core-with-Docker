@@ -18,7 +18,7 @@ namespace WebAPI.Services
             _connection = new SqlConnection(_connectionString);
         }
 
-        #region Add
+        #region Add Product using Store Procedure
         public Product Add(Product entity)
         {
             try
