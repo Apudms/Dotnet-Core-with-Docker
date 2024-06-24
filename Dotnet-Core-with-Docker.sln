@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETLWorkerService", "ETLWorkerService\ETLWorkerService.csproj", "{AEFE535B-5CFD-44C8-BBCE-CFE0B65AF656}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangfireDemo", "HangfireDemo\HangfireDemo.csproj", "{D489923B-9386-4AF3-888D-342234E01453}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AEFE535B-5CFD-44C8-BBCE-CFE0B65AF656}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEFE535B-5CFD-44C8-BBCE-CFE0B65AF656}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEFE535B-5CFD-44C8-BBCE-CFE0B65AF656}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D489923B-9386-4AF3-888D-342234E01453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D489923B-9386-4AF3-888D-342234E01453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D489923B-9386-4AF3-888D-342234E01453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D489923B-9386-4AF3-888D-342234E01453}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
