@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using System.Data;
+using System.Data.SqlClient;
 using WebAPI.Contracts;
 using WebAPI.Models;
 
@@ -23,14 +24,23 @@ namespace WebAPI.Services
         {
             try
             {
-                string query = @"sp_InsertProduct;SELECT @@IDENTITY";
+                string query = @"sp_InsertProduct";
                 _command = new SqlCommand(query, _connection);
+                _command.CommandType = CommandType.StoredProcedure;
                 _command.Parameters.AddWithValue("@ProductName", entity.ProductName);
                 _command.Parameters.AddWithValue("@CategoryId", entity.CategoryId);
                 _command.Parameters.AddWithValue("@Stock", entity.Stock);
                 _command.Parameters.AddWithValue("@Price", entity.Price);
+                // Tambahkan parameter output
+                SqlParameter outputIdParam = new SqlParameter("@ProductId", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                _command.Parameters.Add(outputIdParam);
                 _connection.Open();
-                entity.ProductId = Convert.ToInt32(_command.ExecuteScalar());
+                _command.ExecuteNonQuery();
+                entity.ProductId = (int)outputIdParam.Value; // Ambil nilai ID yang dihasilkan
+                //entity.ProductId = Convert.ToInt32(_command.ExecuteScalar());
                 return entity;
             }
             catch (SqlException sqlEx)

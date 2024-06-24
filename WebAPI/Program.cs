@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using WebAPI.DAL;
 using WebAPI.Contracts;
 using WebAPI.Models;
+using WebAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 builder.Services.AddScoped<ICategory, CategoryService>();
+builder.Services.AddScoped<IProduct, ProductService>();
 
 var app = builder.Build();
 
