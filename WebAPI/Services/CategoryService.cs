@@ -1,11 +1,11 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data;
-using WebAPI.Interfaces;
+using WebAPI.Contracts;
 using WebAPI.Models;
 
 namespace WebAPI.DAL
 {
-    public class CategoriesDAL : ICategory
+    public class CategoryService : ICategory
     {
         private readonly IConfiguration _config;
         private readonly string? _connectionString;
@@ -13,7 +13,7 @@ namespace WebAPI.DAL
         private SqlCommand _command;
         private SqlDataReader _reader;
 
-        public CategoriesDAL(IConfiguration config)
+        public CategoryService(IConfiguration config)
         {
             _config = config;
             _connectionString = _config.GetConnectionString("ConnStr");

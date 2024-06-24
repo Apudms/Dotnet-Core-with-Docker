@@ -1,6 +1,6 @@
 ﻿using WebAPI.Models;
 
-namespace WebAPI.Interfaces
+namespace WebAPI.Contracts
 {
     public interface ICategory : ICrud<Category>
     {

@@ -1,4 +1,4 @@
-﻿namespace WebAPI.Interfaces
+﻿namespace WebAPI.Contracts
 {
     public interface ICrud<T> where T : class
     {

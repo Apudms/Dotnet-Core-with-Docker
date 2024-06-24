@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WebAPI.DAL;
-using WebAPI.Interfaces;
+using WebAPI.Contracts;
 using WebAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,7 +22,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnStr"));
 });
 
-builder.Services.AddScoped<ICategory, CategoriesDAL>();
+builder.Services.AddScoped<ICategory, CategoryService>();
 
 var app = builder.Build();
 
